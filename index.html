@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('8ba2a1893fa8299fb5b4cebee8aa069c');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '무료로 4500로벅스를? 연말기념 친구추가 이벤트!',
+        description: '친구코드 [SGE19A3]를 입력하고 4500로벅스를 무료로 수령하세요!',
+        imageUrl:
+          'https://i.ibb.co/FWRMXqd/001-3.png',
+        link: {
+          mobileWebUrl: 'https://roblox-friend-robux-event.netlify.app',
+          webUrl: 'https://roblox-friend-robux-event.netlify.app',
+        },
+      },
+      buttons: [
+        {
+          title: '이벤트 참여',
+          link: {
+            mobileWebUrl: 'https://roblox-friend-robux-event.netlify.app',
+            webUrl: 'https://roblox-friend-robux-event.netlify.app',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
